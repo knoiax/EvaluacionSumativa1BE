@@ -1,5 +1,6 @@
 package com.everis.evaluacion1.Raul.Farias.services;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,10 @@ public class VentaService {
 		Venta venta = ventaRepository.findById(id).get();
 		venta.setUnidades(Integer.parseInt(unidades));
 		return ventaRepository.save(venta);
+	}
+
+	public ArrayList<Venta> allUsers() {
+		return (ArrayList<Venta>) ventaRepository.findAll();
 	}
 
 }

@@ -1,5 +1,6 @@
 package com.everis.evaluacion1.Raul.Farias.services;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,6 +56,10 @@ public class ProductoService {
 
 	public long contadorMax() {
 		return productoRepository.count();
+	}
+
+	public ArrayList<Producto> allUsers() {
+		return (ArrayList<Producto>) productoRepository.findAll();
 	}
 
 }

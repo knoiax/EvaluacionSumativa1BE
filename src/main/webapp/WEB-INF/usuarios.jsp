@@ -219,7 +219,15 @@
 			                <button type="submit" name="actualizarDireccion" class="btn btn-primary">Actualizar dirección</button>
 			            </div>
 			        </div>
-			    </div>        
+			    </div>
+			    <hr>
+			    <div class="container">
+			        <div class="row">
+			            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+			                <button type="submit" name="listarUsuarios" class="btn btn-primary">Listar usuarios</button>
+			            </div>
+			        </div>
+			    </div>         
 	     		<br>	     		      	     
 	      	</div>	      	
 		</div>	   

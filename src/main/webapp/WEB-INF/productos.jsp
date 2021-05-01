@@ -236,6 +236,12 @@
 			                <button type="submit" name="actualizarDescripcion" class="btn btn-primary">Actualizar descripcion</button>
 			            </div>
 			        </div>
+			        <hr>
+			        <div class="row">
+			            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+			                <button type="submit" name="listarProductos" class="btn btn-primary">Listar productos</button>
+			            </div>
+			        </div>
 			    </div>         
 	     		<br>	     		      	     
 	      	</div>	      	

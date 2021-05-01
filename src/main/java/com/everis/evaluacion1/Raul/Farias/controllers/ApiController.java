@@ -1,5 +1,6 @@
 package com.everis.evaluacion1.Raul.Farias.controllers;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,22 +28,7 @@ public class ApiController {
 	ProductoService productoService;
 	@Autowired
 	VentaService ventaService;
-	
-	/*intente de muchas formas incluyendo otras importaciones pero desconozco las dependencias y 
-	 * me pierdo así, facilmente del objetivo del ejercicio*/
-	@RequestMapping(value="/api",method= RequestMethod.POST, params = "usuarios")
-	public String usuarios() {
-		return "redirect: usuarios.jsp";
-	}
-	@RequestMapping(value="/api",method= RequestMethod.POST, params = "productos")
-	public String productos() {
-		return "redirect: productos.jsp";
-	}
-	@RequestMapping(value="/api",method= RequestMethod.POST, params = "ventas")
-	public String ventas() {
-		return "redirect: ventas.jsp";
-	}
-		
+				
 	//insertar
 	@RequestMapping(value="/api/usuarios",method= RequestMethod.POST, params = "insertar")
 	public Usuario insertUser(@RequestParam(value="nombre") String nombre,
@@ -161,5 +147,21 @@ public class ApiController {
 		Venta venta = ventaService.actualizarUnidades(unidades,id);
 		return venta;
 	}
-
+	
+	//listar
+	@RequestMapping(value="/api/usuarios",method= RequestMethod.POST, params = "listarUsuarios")
+	public ArrayList<Usuario> listarUsuarios(){
+		ArrayList<Usuario> listaU = usuarioService.allUsers();
+		return listaU;
+	}
+	@RequestMapping(value="/api/productos",method= RequestMethod.POST, params = "listarProductos")
+	public ArrayList<Producto> listarProductos(){
+		ArrayList<Producto> listaP = productoService.allUsers();
+		return listaP;
+	}
+	@RequestMapping(value="/api/ventas",method= RequestMethod.POST, params = "listarVentas")
+	public ArrayList<Venta> listarVentas(){
+		ArrayList<Venta> listaV = ventaService.allUsers();
+		return listaV;
+	}
 }

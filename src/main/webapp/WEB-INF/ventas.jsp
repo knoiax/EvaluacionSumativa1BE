@@ -199,6 +199,12 @@
 			                <button type="submit" name="actualizarUnidades" class="btn btn-primary">Actualizar unidades</button>
 			            </div>
 			        </div>
+			        <hr>
+			        <div class="row">
+			            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+			                <button type="submit" name="listarVentas" class="btn btn-primary">Listar ventas</button>
+			            </div>
+			        </div>
 			    </div>         
 	     		<br>	     		      	     
 	      	</div>	      	
